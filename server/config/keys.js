@@ -1,8 +1,5 @@
 require("dotenv").config({ path: ".env" });
 
 module.exports = {
-	mongoURI: process.env.MONGO_URI,
-	TWILIO_SID: process.env.TWILIO_SID,
-	TWILIO_AUTH: process.env.TWILIO_AUTH,
-	TWILIO_PHONE: process.env.TWILIO_PHONE
+	mongoURI: process.env.MONGO_URI || 'mongodb://mike:princeton6@ds157493.mlab.com:57493/cuddlr',
 } 

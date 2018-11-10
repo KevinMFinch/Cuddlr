@@ -4,11 +4,12 @@ const Schema = mongoose.Schema;
 //Create Schema
 const MatchSchema = new Schema({
   userId1: {
-    type: Number
+    type: String
   },
   userId2: {
-    type: Number
+    type: String
   }
 });
 
-module.exports = Match = mongoose.model('match', MatchSchema);
+const Match = mongoose.model('match', MatchSchema);
+module.exports = {Match} 

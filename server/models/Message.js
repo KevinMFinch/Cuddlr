@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 //Create Schema
 const MessageSchema = new Schema({
   senderId: {
-    type: Number,
+    type: String,
     required: true
   },
   timeSent: {

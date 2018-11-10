@@ -3,8 +3,7 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const path = require('path');
 
-const schools = require('./routes/api/schools');
-const buddies = require('./routes/api/buddies');
+const matches = require('./routes/api/matches');
 
 const app = express();
 
@@ -39,8 +38,7 @@ app.use(express.static('client/build'));
 app.get('/', (req, res) =>{
 	res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
 })
-app.use('/api/schools', schools);
-app.use('/api/buddies', buddies);
+app.use('/api/matches', matches);
 
 const port = process.env.PORT || 5000;
 

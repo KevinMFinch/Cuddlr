@@ -4,11 +4,11 @@ const Schema = mongoose.Schema;
 //Create Schema
 const ChatroomSchema = new Schema({
   matchId: {
-    type: Number,
+    type: String,
     required: true
   },
   messageIds: {
-    type: [Number],
+    type: [String],
     required: true,
     default: []
   }

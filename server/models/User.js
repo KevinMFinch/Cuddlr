@@ -5,40 +5,40 @@ const Schema = mongoose.Schema;
 const UserSchema = new Schema({
   email: {
     type: String,
-    required: true,
+    // required: true,
   },
   hashed_password: {
     type: String,
-    required: true,
+    // required: true,
   },
   age: {
     type: Number,
-    required: true
+    // required: true
   },
   university: {
     type: String,
-    required: false
+    // required: false
   },
   isInUniversity: {
     type: Boolean,
-    required: false,
-    default: false
+    // required: false,
+    // default: false
   },
   positionRankings: {
     type: [String],
-    required: false,
+    // required: false,
     default: []
   },
   size: {
     type: String,
-    required: false,
+    // required: false,
   },
   lastLocation: {
     lat: { type: Number },
     long: { type: Number },
   },
   matchIds: {
-    type: [Number],
+    type: [String],
     required: true,
     default: []
   },
@@ -48,11 +48,21 @@ const UserSchema = new Schema({
   },
   gender: {
     type: String,
-    required: true
+    // required: true
   },
   preferredGender: {
     type: String,
-    required: true
+    // required: true
+  },
+  likedIds: {
+    type: [String],
+    required: true,
+    default: []
+  },
+  dislikedIds: {
+    type: [String],
+    required: true,
+    default: []
   }
 });
 
